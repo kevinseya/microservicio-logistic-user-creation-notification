@@ -71,7 +71,8 @@ python app.py
 - **`201 Created:`** Notification processed successfully, but email sending failed.
 ```plaintext
     {
-    "message": "Notification received but mail failed to send",        "data": {
+    "message": "Notification received but mail failed to send",
+        "data": {
             "_id": "some_mongo_id",
             "user_id": "550e8400-e29b-41d4-a716-446655440000",
             "name": "John",
