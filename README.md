@@ -22,7 +22,7 @@ This is project is a simple WEBHOOK create with Flask that allows managing the N
 ```bash
 https://github.com/kevinseya/microservicio-logistic-user-creation-notification.git
 ```
-### 2. Create a Virtual Environment
+### 2. Create a Virtual Environment.
 ```bash
 python -m venv venv
 venv\Scripts\activate
