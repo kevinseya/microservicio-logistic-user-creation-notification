@@ -31,7 +31,7 @@ venv\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
-### 4. Run the Application Locally
+### 4. Run the Application Locally.
 Start the Flask application on your local machine:
 ```bash
 python app.py
