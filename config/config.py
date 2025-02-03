@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-MONGO_URL = os.getenv("MONGO_URL", "mongodb://admin:adminpassword@3.87.89.231:27017/notificaciones_create_user?authSource=admin")
+MONGO_URL = os.getenv("MONGO_URL", "mongodb://adminuser:adminpassword@3.83.119.45/notificaciones_create_user?authSource=admin")
 MONGO_DB_NAME = os.getenv("MONGO_DB_NAME", "notificaciones_db")
 MONGO_COLLECTION = os.getenv("MONGO_COLLECTION", "notificaciones")
 
