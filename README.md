@@ -38,7 +38,7 @@ python app.py
 ```
 ### 5. The application run on `http://localhost:5000`.
 
-## Use of Webhook.
+## Use of Webhook
 
 ###  POST /webhook_create_user Content-Type: application/json
 ```json
