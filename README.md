@@ -27,7 +27,7 @@ https://github.com/kevinseya/microservicio-logistic-user-creation-notification.g
 python -m venv venv
 venv\Scripts\activate
 ```
-### 3. Install depedencies.
+### 3. Install depedencies
 ```bash
 pip install -r requirements.txt
 ```
