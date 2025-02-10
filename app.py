@@ -53,13 +53,78 @@ def webhook():
             return jsonify({"error": f"Error of database: {str(e)}"}), 503
         
         email_sent = send_email(
-            recipient=data["email"],
-            subject="Notificación de Creación de Usuario",
-            body=f"Hola {data['name']} {data['lastname']},\n\n"
-                 f"Tu rol asignado es: {data['role']}\n\n"
-                 f"{data['message']}\n\n"
-                 "Saludos."
-        )
+    recipient=data["email"],
+    subject="🎉 Notificación de Creación de Usuario",
+    body=f"""
+    <html>
+        <head>
+            <style>
+                body {{
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                    margin: 0;
+                    padding: 20px;
+                }}
+                .container {{
+                    background-color: #ffffff;
+                    border-radius: 10px;
+                    padding: 25px;
+                    max-width: 500px;
+                    margin: auto;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    text-align: center;
+                }}
+                h1 {{
+                    color: #333;
+                    font-size: 22px;
+                    margin-bottom: 15px;
+                }}
+                p {{
+                    color: #555;
+                    font-size: 16px;
+                    line-height: 1.6;
+                    margin: 8px 0;
+                }}
+                .highlight {{
+                    color: #007BFF;
+                    font-weight: bold;
+                }}
+                .user-box {{
+                    background-color: #f9f9f9;
+                    padding: 15px;
+                    border-radius: 8px;
+                    border: 1px solid #ddd;
+                    margin-top: 15px;
+                    text-align: left;
+                }}
+                .footer {{
+                    margin-top: 20px;
+                    font-size: 14px;
+                    color: #777;
+                    text-align: center;
+                }}
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>🎉 ¡Bienvenido a Nuestro Sistema! 🎉</h1>
+                <p>Hola <strong class="highlight">{data["name"]} {data["lastname"]}</strong>,</p>
+                <p>Tu cuenta ha sido creada exitosamente con el siguiente rol:</p>
+                
+                <div class="user-box">
+                    <p><strong>👤 Nombre:</strong> <span class="highlight">{data["name"]} {data["lastname"]}</span></p>
+                    <p><strong>🔑 Rol Asignado:</strong> <span class="highlight">{data["role"]}</span></p>
+                    <p><strong>📩 Mensaje:</strong> <span class="highlight">{data["message"]}</span></p>
+                </div>
+
+                <p class="footer">¡Gracias por unirte a nosotros! 🚀</p>
+            </div>
+        </body>
+    </html>
+    """,
+    is_html=True  
+)
+
         
         response = {
             "message": "Notification received and mail sent" if email_sent else "Notification received but mail failed to send",
