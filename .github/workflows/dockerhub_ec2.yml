@@ -66,6 +66,6 @@ jobs:
             # Ejecutar nuevo contenedor
             sudo docker run -d --name user_creation_notification \
               --env-file .env \
-              -p 5000:5000 \
+              -p 5001:5001 \
               kevinseya/user_creation_notification:latest
           EOF

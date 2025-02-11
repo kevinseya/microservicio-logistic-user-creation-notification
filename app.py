@@ -109,7 +109,7 @@ def webhook():
             <div class="container">
                 <h1>🎉 ¡Bienvenido a Nuestro Sistema! 🎉</h1>
                 <p>Hola <strong class="highlight">{data["name"]} {data["lastname"]}</strong>,</p>
-                <p>Tu cuenta ha sido creada exitosamente con el siguiente rol:</p>
+                <p>Tu cuenta ha sido creada exitosamente:</p>
                 
                 <div class="user-box">
                     <p><strong>👤 Nombre:</strong> <span class="highlight">{data["name"]} {data["lastname"]}</span></p>
